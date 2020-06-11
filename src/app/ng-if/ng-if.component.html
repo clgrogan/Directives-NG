@@ -7,7 +7,24 @@
   </div>
   <div *ngIf="courses.length === 0">
     <p class="code">
-      div using '*ngIf="courses.length === 0'' is falsy. No courses exist.
+      div using '*ngIf="courses.length === 0'' is truthy. No courses exist.
     </p>
   </div>
+</section>
+
+<section class="ng-section">
+  <h2>ng-template</h2>
+  <div *ngIf="courses.length > 0; then coursesList; else noCourses"></div>
+  <ng-template #coursesList>
+    <p class="code">
+      div *ngIf="courses.length > 0; then coursesList; else noCourses" condition
+      is truthy so courses exist #coursesList.
+    </p>
+  </ng-template>
+  <ng-template #noCourses>
+    <p class="code">
+      div *ngIf="courses.length > 0; then coursesList; else noCourses" condition
+      is falsy so NO courses exist #noCourses.
+    </p>
+  </ng-template>
 </section>
