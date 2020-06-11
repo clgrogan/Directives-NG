@@ -1,0 +1,13 @@
+<section class="ng-section">
+  <h2>*ngIf</h2>
+  <div *ngIf="courses.length > 0">
+    <p class="code">
+      div using '*ngIf="courses.length > 0"'' is truthy so there are courses.
+    </p>
+  </div>
+  <div *ngIf="courses.length === 0">
+    <p class="code">
+      div using '*ngIf="courses.length === 0'' is falsy. No courses exist.
+    </p>
+  </div>
+</section>
