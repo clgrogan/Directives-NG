@@ -7,7 +7,7 @@
   </div>
   <div *ngIf="courses.length === 0">
     <p class="code">
-      div using '*ngIf="courses.length === 0'' is truthy. No courses exist.
+      d div using '*ngIf="courses.length === 0'' is truthy. No courses exist.
     </p>
   </div>
 </section>
@@ -27,4 +27,20 @@
       is falsy so NO courses exist #noCourses.
     </p>
   </ng-template>
+</section>
+
+<section class="ng-section">
+  <h2>hidden element property with conditional</h2>
+  <div [hidden]="courses.length === 0">
+    <p class="code">
+      div [hidden]="courses.length === 0". If the condition met, then the
+      element is NOT hidden.
+    </p>
+  </div>
+  <div [hidden]="courses.length > 0">
+    <p class="code">
+      div [hidden]="courses.length === 0". If the condition is NOT met, then the
+      element is hidden.
+    </p>
+  </div>
 </section>
