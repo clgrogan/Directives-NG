@@ -1,18 +1,16 @@
-h2 {
-  margin: 0;
-  padding: 0.1rem;
-  font-size: 2rem;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
-}
-
 .ng-section {
   background-color: salmon;
   border-style: groove;
   margin: 0.2rem;
   padding: 0.2rem;
 }
-
+.ng-section h2 {
+  margin: 0;
+  padding: 0.1rem;
+  font-size: 2rem;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
 .code {
   margin: 0.3rem 1rem 0.3rem 1rem;
   padding: 0.2rem;
