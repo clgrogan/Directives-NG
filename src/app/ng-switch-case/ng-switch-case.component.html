@@ -1,0 +1,18 @@
+<section class="ng-section">
+  <h2>*ngSwitchCase</h2>
+  <div class="code">
+    <ul class="pseudo-buttons">
+      <li [class.active]="viewMode === 'map'">
+        <a (click)="viewMode = 'map'">Map View</a>
+      </li>
+      <li [class.active]="viewMode === 'list'">
+        <a (click)="viewMode = 'list'">List View</a>
+      </li>
+    </ul>
+    <div class="code" [ngSwitch]="viewMode">
+      <div *ngSwitchCase="'map'">Map View Content</div>
+      <div *ngSwitchCase="'list'">List View Content</div>
+      <div *ngSwitchDefault>Unspecified View Content</div>
+    </div>
+  </div>
+</section>
