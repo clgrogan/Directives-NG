@@ -1,0 +1,36 @@
+<section class="ng-section">
+  <h2>*ngFor ~ngForOf directive</h2>
+  <p class="code">
+    li *ngFor="let course of courses; index as i; even as isEven"
+  </p>
+  <div>
+    <ul class="no-bull pseudo-buttons">
+      <li
+        class="code"
+        *ngFor="let course of courses; index as i; even as isEven"
+      >
+        {{ i + " - " + course.name }} <span *ngIf="isEven">(Even)</span>
+      </li>
+    </ul>
+    <p class="code">
+      Find more information about exported values here:
+      <a href="https://angular.io/api/common/NgForOf">Angular.io NgForOf</a>
+    </p>
+  </div>
+  <div>
+    <h3>The following exported values can be aliased to local variables:</h3>
+    <p class="code">
+      $implicit: T: The value of the individual items in the iterable
+      (ngForOf).<br />
+      ngForOf: NgIterable: The value of the iterable expression. Useful when the
+      expression is more complex then a property access, for example when using
+      the async pipe (userStreams | async).<br />
+      index: number: The index of the current item in the iterable.<br />
+      count: number: The length of the iterable.<br />
+      first: boolean: True when the item is the first item in the iterable.<br />
+      last: boolean: True when the item is the last item in the iterable.<br />
+      even: boolean: True when the item has an even index in the iterable.<br />
+      odd: boolean: True when the item has an odd index in the iterable.
+    </p>
+  </div>
+</section>
