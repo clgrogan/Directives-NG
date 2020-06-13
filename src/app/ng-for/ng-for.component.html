@@ -10,6 +10,7 @@
         *ngFor="let course of courses; index as i; even as isEven"
       >
         {{ i + " - " + course.name }} <span *ngIf="isEven">(Even)</span>
+        <button (click)="onClickRemoveCourse(course)">Delete</button>
       </li>
     </ul>
     <p class="code">
@@ -33,4 +34,14 @@
       odd: boolean: True when the item has an odd index in the iterable.
     </p>
   </div>
+</section>
+<section class="ng-section">
+  <h2>*ngFor and Change Detection</h2>
+  When the contributer to an element changes, Angular detects the change and
+  updates the DOM accordingly.
+  <p class="code">
+    When the button is clicked a method executes updating the courses array,
+    which is iterated over to list each course above in the *ngFor section.<br />
+    <button (click)="onClickAddCourse()">Add Course</button>
+  </p>
 </section>

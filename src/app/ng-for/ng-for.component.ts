@@ -12,4 +12,12 @@ export class NgForComponent {
     { id: 2, name: "course2" },
     { id: 3, name: "course3" },
   ];
+  onClickAddCourse = () => {
+    this.courses.push({
+      id: this.courses.length,
+      name: "course" + this.courses.length,
+    });
+  };
+  onClickRemoveCourse = (course) =>
+    this.courses.splice(this.courses.indexOf(course), 1);
 }
