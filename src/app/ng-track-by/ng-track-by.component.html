@@ -1,0 +1,35 @@
+<section class="ng-section">
+  <h2>trackBy for ng-directives</h2>
+  Change the method of tracking source information that has been rendered to the
+  DOM. Example, when reloading a table's data and the data is a duplicate
+  Angular tracks by memory location. Since the table is new the memory location
+  changed even though the content did not. <br />
+  trackBy enables the use of something like an ID to be used for tracking. So if
+  the data doesn't change on the refresh, the DOM does not re-render the
+  element. div.code
+  <p class="code">
+    When the button is clicked a method executes reloading the books array.<br />
+    <button (click)="onClickLoadBooks()">Load Books</button>
+  </p>
+  <div class="code">
+    <p>
+      The entire UL here will reload in the DOM when the 'Load Books' button is
+      clicked.<br />
+      li *ngFor="let book of books">
+    </p>
+    <ul class="pseudo-buttons">
+      <li *ngFor="let book of books">{{ book.name }}</li>
+    </ul>
+  </div>
+  <div class="code">
+    <p>
+      Each is tracked by ID. Only the LI where values for the associated ID have
+      changed will be updated, even if the entire source has been updated and a
+      new memory location exists for the tracked items.<br />
+      li *ngFor="let book of books; trackBy: trackBook">
+    </p>
+    <ul class="pseudo-buttons">
+      <li *ngFor="let book of books; trackBy: trackBook">{{ book.name }}</li>
+    </ul>
+  </div>
+</section>
