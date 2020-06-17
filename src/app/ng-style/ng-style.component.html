@@ -1,0 +1,60 @@
+<section class="ng-section">
+  <h2>*ngStyle for style binding</h2>
+  ngStyle binding allows multiple styles to be bound with an element with only
+  one class binding event.<br />
+  Using *ngStyle is not a best practice.
+  <div class="code">
+    <button
+      [style.backgroundColor]="canSave ? 'blue' : 'gray'"
+      [style.color]="canSave ? 'white' : 'black'"
+      [style.fontWeight]="canSave ? 'bold' : 'normal'"
+      (click)="onClick()"
+    >
+      Save
+    </button>
+    toggle canSave value: {{ canSave }}
+    <p
+      class="code"
+      [style.backgroundColor]="canSave ? 'blue' : 'gray'"
+      [style.color]="canSave ? 'white' : 'black'"
+      [style.fontWeight]="canSave ? 'bold' : 'normal'"
+    >
+      &lt;button <br />
+      [style.backgroundColor]="canSave ? 'blue' : 'gray'"<br />
+      [style.color]="canSave ? 'white' : 'black'" <br />
+      [style.fontWeight]="canSave ? 'bold' : 'normal'" <br />
+      (click)="onClick()"> <br />
+      Save &lt;/button>
+    </p>
+  </div>
+  <div class="code">
+    <button
+      [ngStyle]="{
+        backgroundColor: canSave ? 'blue' : 'gray',
+        color: canSave ? 'white' : 'black',
+        fontWeight: canSave ? 'bold' : 'normal'
+      }"
+      (click)="onClick()"
+    >
+      Save
+    </button>
+    toggle canSave value: {{ canSave }}
+    <p
+      class="code"
+      [ngStyle]="{
+        backgroundColor: canSave ? 'blue' : 'gray',
+        color: canSave ? 'white' : 'black',
+        fontWeight: canSave ? 'bold' : 'normal'
+      }"
+    >
+      &lt;button <br />
+      [ngStyle]="&#123;<br />
+      backgroundColor: canSave ? 'blue' : 'gray',<br />
+      color: canSave ? 'white' : 'black',<br />
+      fontWeight: canSave ? 'bold' : 'normal'<br />
+      &#125;"<br />
+      (click)="onClick()"> <br />
+      Save &lt;/button>
+    </p>
+  </div>
+</section>

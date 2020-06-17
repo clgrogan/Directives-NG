@@ -7,6 +7,7 @@ import { NgSwitchCaseComponent } from './ng-switch-case/ng-switch-case.component
 import { NgForComponent } from './ng-for/ng-for.component';
 import { NgTrackByComponent } from './ng-track-by/ng-track-by.component';
 import { NgClassComponent } from './ng-class/ng-class.component';
+import { NgStyleComponent } from './ng-style/ng-style.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { NgClassComponent } from './ng-class/ng-class.component';
     NgSwitchCaseComponent,
     NgForComponent,
     NgTrackByComponent,
-    NgClassComponent
+    NgClassComponent,
+    NgStyleComponent
   ],
   imports: [
     BrowserModule
