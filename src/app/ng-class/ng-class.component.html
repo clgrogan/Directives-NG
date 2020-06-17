@@ -1,0 +1,36 @@
+<section class="ng-section">
+  <h2>*ngClass for class binding.</h2>
+  ngClass binding allows multiple classes to be bound with an element with only
+  one class binding event.<br />
+  When using class binding on an element we previously had to code each class
+  binding separately.<br />
+  <p class="code">
+    ngClass is an attribute directive. It is used to modify an attribute on an
+    existing DOM element.
+  </p>
+
+  <p class="code">
+    <button (click)="onClick()">Toggle isActive</button>
+    isActive: {{ isActive }}
+  </p>
+  <p class="code" [class.active]="isActive" [class.not-active]="!isActive">
+    &lt;p class="class" <br />
+    [class.active] = "isActive" <br />
+    [class.not-active] = "!isActive"&gt; <br />
+    &lt;/p&gt;
+  </p>
+  <p
+    class="code"
+    [ngClass]="{
+      active: isActive,
+      'not-active': !isActive
+    }"
+  >
+    &lt;p class="class" <br />
+    [ngClass]="&#123;<br />
+    active: isActive,<br />
+    'not-active': !isActive <br />&#125;"
+    <br />
+    &lt;/p&gt;
+  </p>
+</section>
