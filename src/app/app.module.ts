@@ -8,6 +8,9 @@ import { NgForComponent } from './ng-for/ng-for.component';
 import { NgTrackByComponent } from './ng-track-by/ng-track-by.component';
 import { NgClassComponent } from './ng-class/ng-class.component';
 import { NgStyleComponent } from './ng-style/ng-style.component';
+import { SafeTraversalOperatorComponent } from './safe-traversal-operator/safe-traversal-operator.component';
+import { CustomDirectiveDirective } from './custom-directive.directive';
+import { UseCustomDirectiveComponent } from './use-custom-directive/use-custom-directive.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +20,10 @@ import { NgStyleComponent } from './ng-style/ng-style.component';
     NgForComponent,
     NgTrackByComponent,
     NgClassComponent,
-    NgStyleComponent
+    NgStyleComponent,
+    SafeTraversalOperatorComponent,
+    CustomDirectiveDirective,
+    UseCustomDirectiveComponent
   ],
   imports: [
     BrowserModule

@@ -1,0 +1,30 @@
+<section class="ng-section">
+  <h2>Safe Traversal Operator '?'</h2>
+  <h2>aka Safe Navigation</h2>
+  <p>
+    When rendering complex objects some of the attributes/properties of the
+    object may not exist at the moment the DOM is initialized<br />
+    Adding the '?' before the dot allows the value to be null without adversely
+    impacting the rendering.
+  </p>
+  <p class="code">
+    &#123; &#123; task.assignee<b>?</b>.name &#125; &#125; =
+    {{ task.assignee?.name }}
+    <br />
+    &#123; &#123; task.assignee<b>?</b>.ID &#125; &#125; =
+    <span>{{ task.assignee?.ID }}</span>
+  </p>
+  <p class="code">
+    When the assignee is null, the 'Cannot read property 'name' of null' error
+    will occur and the DOM will not be updated past this point.<br />
+    &#123; &#123; task.assignee.name &#125; &#125; =
+    {{ task.assignee.name }}
+    <br />
+    &#123; &#123; task.assignee.ID &#125; &#125; =
+    <span>{{ task.assignee.ID }}</span>
+  </p>
+
+  <button (click)="onClick('Bob Evans', 123)">
+    Set or Null Task Assignee Info
+  </button>
+</section>

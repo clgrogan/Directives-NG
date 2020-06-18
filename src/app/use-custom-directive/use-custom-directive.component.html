@@ -1,0 +1,14 @@
+<section class="ng-section">
+  <h2>Custom Directive Use</h2>
+  <p>This directive will be applied to the input element below:</p>
+  <p class="code">
+    <input type="text" [appCustomDirective]="'lowercase'" />
+  </p>
+  <p>
+    The HostListener decorator is used to listen for events on elements using
+    this custom directive.<br />
+    When the 'blur' event is raised, the input field's value will be updated to
+    either uppercase or lowercase depending on the parameter passed from the
+    element.
+  </p>
+</section>
